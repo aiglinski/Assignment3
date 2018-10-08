@@ -13,21 +13,33 @@
  </head>
 
  <body>
-    <form>
+   <fieldset>
+   <legend>Pay Info:</legend>
+    <form id="inputForm">
       Hourly Pay:
       <br>
-      <input type="text" name="hourly">
-      <br>
+      <input type="number" name="hourly">
+      <br><br>
       Hours per week:
       <br>
-      <input type="text" name="hours">
+      <input type="number" name="hours">
       <br>
       <!-- <input type="submit" value="submit"> -->
     </form>
-
+    <br>
     <button onclick="payFunction()">Submit</button>
+    </fieldset>
 
-    <section class="output"></section>
+
+
+    <section class="output">
+      <header>
+        <h1 class="outputHeader">
+          Your paycheck will be roughly:
+        </h1>
+        <p id="functionOutput"></p>
+      </header>
+    </section>
 
 
 
@@ -35,15 +47,39 @@
 
 
     <script>
-    if (hours < 40) {
-      var Paycheck = hours * hourly;
-      window.alert("Your pay check will be roughly " + Paycheck);
+    function payFunction() {
+      var x = document.forms["inputForm"]["hourly"].value;
+      var y = document.forms["inputForm"]["hours"].value;
+      if (y < 40){
+        var z = x * y;
+        document.getElementById("functionOutput").innerHTML = z;
+      }
+      else{
+        var z = ((y-40) * x * 1.5) + (40 * x);
+        document.getElementById("functionOutput").innerHTML = z;
+      }
     }
-    else {
-      var Paycheck = ((hours - 40) * hourly * 1.5) + (40 * hourly) ;
-      window.alert("Your pay check will be roughly " + Paycheck);
-    }
-    </script>
+
+
+
+
+
+
+
+
+
+  //   function payFunction() {
+  //   if (hours < 40) {
+  //     var Paycheck = hours * hourly;
+  //     document.getElementById("functionOutput").innerHTML = "Paycheck";
+  //   }
+  //   else {
+  //     var Paycheck = ((hours - 40) * hourly * 1.5) + (40 * hourly) ;
+  //     window.alert("Your pay check will be roughly " + Paycheck);
+  //   }
+  // }
+  //   document.getElementById("functionOutput").innerHTML = Paycheck;
+  //   </script>
 
 
 
