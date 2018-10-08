@@ -6,3 +6,19 @@
   margin-right: 30%;
   text-align: center;
 }
+
+#inputForm{
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+  text-align: center;
+}
+#submitButton, #formHeading{
+  width: 10%;
+  margin-left: 45%;
+  margin-right: 45%;
+  text-align: center;
+}
+#functionOutput{
+  font-size: 20vh;
+}
