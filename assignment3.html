@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ITDEV-117 Starter File</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+// * * * * This is the start of the script section. No need to edit above this line. * * * *
+
+//put all your code inside the script tags! For example:
+
+
+		var hourly;
+		hourly = Number(prompt("How much do you make per hour?"));
+		var hours;
+		hours = Number(prompt("How many hours a week do you work?"));
+
+		if (hours < 40) {
+			var Paycheck = hours * hourly;
+			window.alert("Your pay check will be roughly " + Paycheck);
+		}
+		else {
+			var Paycheck = ((hours - 40) * hourly * 1.5) + (40 * hourly) ;
+			window.alert("Your pay check will be roughly " + Paycheck);
+		}
+
+
+
+
+
+
+
+
+
+// * * * * This is the end of the script section. No need to edit below this line. * * * *
+    </script>
+</body>
+</html>
