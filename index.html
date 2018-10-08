@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>Paycheck Form</title>
+     <meta name="description" content="DESCRIPTION">
+    <link rel="stylesheet" href="style.css">
+
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+
+ <body>
+    <form>
+      Hourly Pay:
+      <br>
+      <input type="text" name="hourly">
+      <br>
+      Hours per week:
+      <br>
+      <input type="text" name="hours">
+      <br>
+      <!-- <input type="submit" value="submit"> -->
+    </form>
+
+    <button onclick="payFunction()">Submit</button>
+
+    <section class="output"></section>
+
+
+
+
+
+
+    <script>
+    if (hours < 40) {
+      var Paycheck = hours * hourly;
+      window.alert("Your pay check will be roughly " + Paycheck);
+    }
+    else {
+      var Paycheck = ((hours - 40) * hourly * 1.5) + (40 * hourly) ;
+      window.alert("Your pay check will be roughly " + Paycheck);
+    }
+    </script>
+
+
+
+
+ </body>
+
+ </html>
