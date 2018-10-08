@@ -1,11 +1,14 @@
 .output{
   width: 40vw;
-  height: 50vh;
+  height: 70vh;
   border: 5px double black;
   margin-left: 30%;
   margin-right: 30%;
   text-align: center;
 }
+/* h2{
+  font-size:
+} */
 
 #inputForm{
   width: 30%;
@@ -20,5 +23,8 @@
   text-align: center;
 }
 #functionOutput{
-  font-size: 20vh;
+  font-size: 5vh;
+}
+#monthlyOutput, #yearlyOutput{
+  font-size: 3vh;
 }

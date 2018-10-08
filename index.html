@@ -38,6 +38,11 @@
           Your paycheck will be roughly:
         </h1>
         <p id="functionOutput"></p>
+        <h2 class="monthlyHeader">Monthly that would be:</h2>
+        <p id="monthlyOutput"></p>
+        <h2 class="yearlyHeader">Or Yearly:</h2>
+        <p id="yearlyOutput"></p>
+
       </header>
     </section>
 
@@ -55,9 +60,15 @@
         document.getElementById("functionOutput").innerHTML = z;
       }
       else{
-        var z = ((y-40) * x * 1.5) + (40 * x);
+        var z = Math.round((y-40) * x * 1.5) + (40 * x);
         document.getElementById("functionOutput").innerHTML = z;
       }
+
+      var monthly = Math.round(z * 4);
+      document.getElementById("monthlyOutput").innerHTML = monthly;
+
+      var yearly = Math.round(z/7) * 365;
+      document.getElementById("yearlyOutput").innerHTML = yearly;
     }
 
 
